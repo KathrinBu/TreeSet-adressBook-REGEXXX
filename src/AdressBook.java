@@ -16,11 +16,11 @@ public class AdressBook implements Comparable<AdressBook>{
     public AdressBook(String name) {
         try {
             if(Pattern.compile("[A-Za-z0-9?:!_+,-]+@[a-z]+\\.[a-z]{2,3}").matcher(name).matches()) ;
-
+            this.name = name;
         } catch (Exception e) {
             System.out.println("error :((");
         }
-        this.name = name; }
+         }
 
 
     @Override
