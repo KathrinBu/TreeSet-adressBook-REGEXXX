@@ -13,13 +13,13 @@ public class AdressBook implements Comparable<AdressBook>{
         this.name = name;
     }
 
-    public AdressBook(String name) {
-        try {
-            if(Pattern.compile("[A-Za-z0-9?:!_+,-]+@[a-z]+\\.[a-z]{2,3}").matcher(name).matches()) ;
-            this.name = name;
-        } catch (Exception e) {
-            System.out.println("error :((");
-        }
+    public AdressBook(String name) throws Exception {
+
+            if(Pattern.compile("[A-Za-z0-9?:!_+,-]+@[a-z]+\\.[a-z]{2,3}").matcher(name).matches())
+                this.name = name;
+            else
+                throw new Exception("ааааа");
+
          }
 
 
